@@ -1842,6 +1842,12 @@ a:visited {
 	-webkit-transition: all 500ms ease;
 	transition: all 500ms ease;
 }
+.four-pillars{
+	
+}
+.four-pillars:hover {
+	color: #fff!important;
+}
 
 .blog-one__single:hover .blog-one__content h3 a,
 .blog-one__content h3 a:hover {
