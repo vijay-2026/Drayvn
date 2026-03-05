@@ -1751,7 +1751,7 @@ a:visited {
 .blog-one__single:hover .blog-one__image>img {
 	-webkit-transform: scale(1.05);
 	        transform: scale(1.05);
-	opacity: 0.5;
+	opacity: 10;
 }
 
 .blog-one__meta {
