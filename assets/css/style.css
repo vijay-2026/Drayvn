@@ -92,7 +92,7 @@ a:visited {
 	font-size: 16px;
 	font-weight: bold;
 	color: #fff;
-	padding: 13px 50px;
+	    padding: 6px 37.5px;
 	position: relative;
 	-webkit-transition: all .4s ease;
 	transition: all .4s ease;
@@ -2519,7 +2519,14 @@ a:visited {
 	padding-bottom: 90px;
 	padding-top: 195px;
 }
-
+.price-one {
+	padding-bottom: 10px;
+	padding-top: 195px;
+}
+.price-two {
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
 .service-one__single {
 	border-radius: 135px;
 	background-color: #fff;
@@ -2673,8 +2680,49 @@ a:visited {
 	-webkit-transform: perspective(150px) scaleX(1);
 	        transform: perspective(150px) scaleX(1);
 }
+/*--------------------------------------------------------------
+# Vijay Mallela
+--------------------------------------------------------------*/
+/* Blog section cards */
+.blog-one .blog-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
 
+/* Default text color */
+.blog-one .blog-card h3,
+.blog-one .blog-card p {
+  color: #222;
+  transition: color 0.3s ease;
+}
 
+/* Hover effect */
+.blog-one .blog-card:hover h3,
+.blog-one .blog-card:hover p {
+  color: #ffffff;
+}
+
+/* Optional dark overlay on hover */
+.blog-one .blog-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  transition: 0.3s ease;
+  z-index: 1;
+}
+
+.blog-one .blog-card:hover::before {
+  background: rgba(0,0,0,0.5);
+}
+
+/* Keep text above overlay */
+.blog-one .blog-card h3,
+.blog-one .blog-card p {
+  position: relative;
+  z-index: 2;
+}
 /*--------------------------------------------------------------
 # Call to action
 --------------------------------------------------------------*/
@@ -3150,14 +3198,23 @@ a:visited {
 .pricing-one__single h3 {
 	margin: 0;
 	color: var(--thm-base);
-	font-size: 60px;
+	font-size: 30px;
 	font-weight: 600;
 	position: relative;
 	line-height: 1em;
 	-webkit-transition: all 500ms;
 	transition: all 500ms;
 }
-
+.pricing-one__single h3 span {
+	margin: 0;
+	color: var(--thm-base);
+	font-size: 20px;
+	font-weight: 600;
+	position: relative;
+	line-height: 1em;
+	-webkit-transition: all 500ms;
+	transition: all 500ms;
+}
 .pricing-one__single p {
 	margin: 0;
 	font-size: 18px;
@@ -3177,7 +3234,7 @@ a:visited {
 	border-top: 1px solid #f6f6fb;
 	padding-bottom: 55px;
 	padding-top: 55px;
-	margin-top: 60px;
+	margin-top: 0px;
 	-webkit-transition: all 500ms ease;
 	transition: all 500ms ease;
 }
