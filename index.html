@@ -26,6 +26,7 @@
 
     <!-- theme styles -->
     <link rel="stylesheet" href="assets/css/style.css">
+
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 
@@ -167,6 +168,78 @@
             </div><!-- /.container -->
         </section><!-- /.service-one -->
 
+     <section  class="advantage-one">
+  <div class="container">
+    <div class="why-two reveal">
+      <div>
+        <div class="section-label">The Competitive Advantage</div>
+        <h2>Not a chatbot.<br>Not an API wrapper.<br>An AI OS.</h2>
+      </div>
+      <div class="why-right">Enterprise AI has two failure modes: chat interfaces that only generate text, and raw cloud APIs that require an engineering army. Drayvn is the governed operating layer that gives every enterprise an AI workforce — on their own terms, with their own models.</div>
+    </div>
+    <div class="reveal d1">
+      <table class="ctable">
+        <thead><tr><th>Capability</th><th>Cloud SaaS AI<br><small style="font-weight:400;text-transform:none;letter-spacing:0">(ChatGPT / Copilot / Gemini)</small></th><th>Raw Cloud APIs<br><small style="font-weight:400;text-transform:none;letter-spacing:0">(AWS Bedrock / Azure OpenAI)</small></th><th>✦ Drayvn — BYOM Platform</th></tr></thead>
+        <tbody>
+          <tr><td>Your Model</td><td>Forced to use their model — no choice</td><td>Limited to their hosted models</td><td>BYOM — bring GPT-4, Claude, Gemini, Llama, or your own fine-tuned model</td></tr>
+          <tr><td>Data Privacy</td><td>Data sent to their cloud, trained on</td><td>Logical isolation only — still their datacenter</td><td>Physical isolation — Dell Pro Max in your office, data never leaves</td></tr>
+          <tr><td>Action</td><td>Chat only — text in, text out</td><td>Code-heavy scaffolding for every action</td><td>Browser-Use Agents — log in, click, execute on any web portal</td></tr>
+          <tr><td>Governance</td><td>Black box — trust their safety filters</td><td>Build your own guardrails from scratch</td><td>The Sentinel — PII, drift, hallucination monitoring built-in</td></tr>
+          <tr><td>Cost</td><td>Per-user license + per-token fees</td><td>Pay-per-token — explodes at volume</td><td>Zero marginal inference cost on edge hardware</td></tr>
+          <tr><td>Lock-in</td><td>Total vendor lock-in</td><td>API dependency + cloud dependency</td><td>Eject to Code — portable Python agents, run anywhere</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+		
+		
+		<section class="cta-one">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">BYOM — Bring Your Own Model</div>
+      <h2>Your models. Your data.<br>Your infrastructure.</h2>
+    </div>
+    <div class="byom-grid">
+      <div class="reveal d1">
+        <p style="color:var(--muted);font-size:1.05rem;line-height:1.75;margin-bottom:1.75rem">Unlike cloud AI SaaS providers who force you into their model ecosystem, Drayvn is model-agnostic by design. Connect any model — commercial APIs, open-source, or your own fine-tuned private models — through a single governed interface. You own the relationship with every model provider.</p>
+        <div style="display:flex;flex-direction:column;gap:.75rem">
+          <div style="display:flex;align-items:center;gap:.9rem;padding:1rem 1.25rem;background:var(--card);border:1px solid var(--border);border-radius:10px"><span style="font-size:1.2rem">🔐</span><div><div style="font-weight:600;font-size:.9rem;margin-bottom:.15rem">No data sent to model providers without your control</div><div style="font-size:.8rem;color:var(--muted)">PII stripped at edge before any API call</div></div></div>
+          <div style="display:flex;align-items:center;gap:.9rem;padding:1rem 1.25rem;background:var(--card);border:1px solid var(--border);border-radius:10px"><span style="font-size:1.2rem">🔄</span><div><div style="font-weight:600;font-size:.9rem;margin-bottom:.15rem">Switch models without re-engineering your agents</div><div style="font-size:.8rem;color:var(--muted)">Model-agnostic orchestration layer handles routing</div></div></div>
+          <div style="display:flex;align-items:center;gap:.9rem;padding:1rem 1.25rem;background:var(--card);border:1px solid var(--border);border-radius:10px"><span style="font-size:1.2rem">🏠</span><div><div style="font-weight:600;font-size:.9rem;margin-bottom:.15rem">Host your own model on Dell Pro Max (GB10)</div><div style="font-size:.8rem;color:var(--muted)">Zero-cost inference, 100% physically isolated</div></div></div>
+        </div>
+        <div style="margin-top:2rem"><a href="architecture.html#byom" class="btn btn-outline">Learn About BYOM →</a></div>
+      </div>
+      <div class="reveal d2">
+        <div class="byom-vis">
+          <div style="font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem">Your Model Options</div>
+          <div class="model-row">
+            <div class="model-badge">GPT-4o</div>
+            <div class="model-badge">Claude 3.5</div>
+            <div class="model-badge">Gemini Pro</div>
+            <div class="model-badge">Llama-3</div>
+            <div class="model-badge">Mistral</div>
+            <div class="model-badge yours">⚡ Your Fine-Tuned Model</div>
+          </div>
+          <div class="model-arrow">↓ All routed through Drayvn's governed layer</div>
+          <div class="byom-platform-box">🛡️ Drayvn Orchestration + Sentinel<div style="font-family:var(--B);font-size:.78rem;color:rgb(255 45 45 / 70%);font-weight:500;margin-top:.3rem">PII stripped · Policy enforced · Cost tracked</div></div>
+          <div class="model-arrow">↓ Executes on your infrastructure</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem">
+            <div style="background:rgb(109 111 110 / 6%);border:1px solid rgb(97 94 94 / 20%);border-radius:8px;padding:1rem;text-align:center;font-size:.8rem;font-weight:600;color:var(--green)">🖥️ Dell Pro Max<div style="font-weight:400;color:rgb(255 45 45 / 70%);margin-top:.2rem">On-Premise</div></div>
+            <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1rem;text-align:center;font-size:.8rem;font-weight:600;color:var(--muted)">☁️ Your VPC<div style="font-weight:400;margin-top:.2rem">Private Cloud</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+		
+		
+		
+		
+		
+		
+		
         <section class="cta-one">
             <img src="assets/images/shapes/cta-1-shape-1.png" class="cta-one__bg-shape-1" alt="">
             <img src="assets/images/shapes/cta-1-shape-2.png" class="cta-one__bg-shape-2" alt="">
@@ -235,14 +308,14 @@
             <div class="container">
                 <div class="block-title text-center">
                     
-                    <h3>Build powerful AI agents</h3>
+                    <h3>Action Capability</h3>
 					
                 </div><!-- /.block-title text-center -->
                 <div class="row">
                     <div class="col-lg-6 ">
                         <div class="blog-one__single four-pillars">
                             <div class="blog-one__image">
-                                <img src="assets/images/Hybrid-Deployment.jpg" alt="">
+                                <img src="assets/images/Action-Capability.jpg" alt="">
                             </div><!-- /.blog-one__image -->
                             <div class="blog-one__content">
                                 <div class="blog-one__circle"></div><!-- /.blog-one__circle -->
