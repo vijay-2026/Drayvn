@@ -817,7 +817,7 @@
     }
     .ft-num.g {
         background: var(--green);
-        color: #000;
+        color: #ffffff;
     }
     .ft-num.y {
         background: var(--yellow);
@@ -1526,6 +1526,259 @@
         }
         .form-row {
             grid-template-columns: 1fr;
+        }
+    }
+
+/*Platform*/
+
+
+
+    .module-nav {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid var(--border);
+    }
+    .module-nav a {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--muted);
+        text-decoration: none;
+        padding: 0.4rem 0.9rem;
+        border: 1px solid var(--border);
+        border-radius: 100px;
+        transition: all 0.2s;
+    }
+    .module-nav a:hover,
+    .module-nav a.active {
+        color: var(--green);
+        border-color: rgba(45, 255, 114, 0.3);
+        background: var(--gdim);
+    }
+    .module-section {
+        padding: 5rem 0;
+        border-bottom: 1px solid var(--border);
+    }
+    .module-section:last-of-type {
+        border-bottom: none;
+    }
+    .mod-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: start;
+    }
+    .mod-layout.flip {
+        direction: rtl;
+    }
+    .mod-layout.flip > * {
+        direction: ltr;
+    }
+    .mod-tag-row {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-bottom: 1.25rem;
+        margin-top: 1rem;
+    }
+    .mod-desc {
+        font-size: 1.05rem;
+        color: var(--muted);
+        line-height: 1.75;
+        margin: 1rem 0 1.75rem;
+    }
+    .mod-points {
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+    }
+    .mod-point {
+        display: flex;
+        gap: 0.9rem;
+        align-items: flex-start;
+    }
+    .mod-point-ico {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        background: var(--gdim);
+        border: 1px solid rgba(45, 255, 114, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+        margin-top: 0.1rem;
+    }
+    .mod-point-ico.y {
+        background: var(--ydim);
+        border-color: rgba(245, 200, 66, 0.2);
+    }
+    .mod-point-title {
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin-bottom: 0.2rem;
+        color: var(--white);
+    }
+    .mod-point-desc {
+        font-size: 0.83rem;
+        color: var(--muted);
+        line-height: 1.6;
+    }
+    .mod-visual {
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        overflow: hidden;
+        background: var(--surface);
+    }
+    .mod-visual-header {
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    .mod-visual-title {
+        font-family: var(--D);
+        font-size: 0.83rem;
+        font-weight: 700;
+        color: var(--muted);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+    .mod-visual-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--green);
+        animation: pulse 2s infinite;
+    }
+    .mod-visual-body {
+        padding: 1.5rem;
+    }
+    .flow-step {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        background: var(--card);
+        border-radius: 8px;
+        border: 1px solid var(--border);
+        margin-bottom: 0.5rem;
+        font-size: 0.85rem;
+        font-weight: 500;
+    }
+    .flow-step .fs-ico {
+        font-size: 1rem;
+        flex-shrink: 0;
+    }
+    .flow-step .fs-arrow {
+        color: var(--muted);
+        margin-left: auto;
+        font-size: 0.75rem;
+    }
+    .flow-step.active {
+        border-color: rgb(54 54 54 / 25%);
+        background: rgb(85 85 85 / 5%);
+        color: var(--green);
+    }
+    .pill-row {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        margin-top: 0.75rem;
+    }
+    .pill {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 0.35rem 0.8rem;
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: var(--muted);
+    }
+    .pill.g {
+        color: var(--green);
+        border-color: rgb(54 55 54 / 25%);
+        background: var(--gdim);
+    }
+    .pill.y {
+        color: var(--yellow);
+        border-color: rgba(245, 200, 66, 0.25);
+        background: var(--ydim);
+    }
+    .sentinel-checks {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    .sc {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        background: var(--card);
+        border: 1px solid var(--border);
+    }
+    .sc-status {
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        padding: 0.2rem 0.5rem;
+        border-radius: 4px;
+    }
+    .sc-status.pass {
+        color: #000;
+        background: #e3e3e3;
+    }
+    .sc-status.block {
+        color: #000;
+        background: #e3e3e3;
+    }
+    .sc-label {
+        font-size: 0.85rem;
+        font-weight: 500;
+        flex: 1;
+    }
+    .sc-detail {
+        font-size: 0.75rem;
+        color: var(--muted);
+    }
+    .obs-metric {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1px;
+        background: var(--border);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 1rem;
+    }
+    .om {
+        background: var(--card);
+        padding: 1rem;
+        text-align: center;
+    }
+    .om-val {
+        font-family: var(--D);
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin-bottom: 0.2rem;
+    }
+    .om-lbl {
+        font-size: 0.73rem;
+        color: var(--muted);
+    }
+    @media (max-width: 960px) {
+        .mod-layout,
+        .mod-layout.flip {
+            grid-template-columns: 1fr;
+            direction: ltr;
+            gap: 2.5rem;
         }
     }
 
