@@ -75,15 +75,207 @@
             <div class="container">
                 <div class="block-title text-center">
                     <!--<p>Feature List</p-->
-                    <h3>Architecture</h3>
+                    <h3>The Hybrid Architecture.<br>
+Control in the cloud.<br>
+Intelligence at the edge.</h3>
 						
                 </div><!-- /.block-title text-center -->
 				<div class="cta-two__text text-center">
-                                <p>Will be updated soon...</p>
+                                <p>Drayvn splits the AI stack intelligently: orchestration and governance run in Drayvn's managed cloud control plane, while sensitive inference and model training run on your Dell Pro Max hardware inside your building. You get cloud simplicity with on-prem security.</p>
                             </div><!-- /.cta-two__text -->
 				</div>
   </section><!-- /.service-one -->
 
+		
+		
+		<section style="padding:6rem 0;border-bottom:1px solid var(--border)">
+  <div class="container">
+    <div class="reveal" style="text-align:center;margin-bottom:4rem">
+      <div class="section-label" style="text-align:center">The Hybrid Smile Diagram</div>
+      <h2>Cloud orchestration. Edge intelligence.</h2>
+      <p style="color:var(--muted);margin-top:1rem;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.75">Users and copilots sit on top. The control plane routes and governs. Sensitive data never leaves your edge hardware.</p>
+    </div>
+    <div class="arch-diagram reveal d1">
+      <!-- ACCESS LAYER -->
+      <div class="arch-layer">
+        <div class="arch-layer-label top">▤ Access Layer — Your Users &amp; Systems</div>
+        <div class="arch-layer-nodes">
+          <div class="arch-node">👤 Users</div>
+          <div class="arch-node">🤖 Copilots</div>
+          <div class="arch-node">📱 Legacy Apps</div>
+          <div class="arch-node">🔌 External Systems</div>
+        </div>
+      </div>
+      <div class="arch-arrow">↕ HTTPS / Encrypted</div>
+      <!-- CONTROL PLANE -->
+      <div class="arch-layer mid-layer">
+        <div class="arch-layer-label mid">☁ Drayvn Managed Cloud — Control Plane (GCP / VPC)</div>
+        <div class="arch-layer-nodes">
+          <div class="arch-node active-y">🛡️ The Sentinel (Guardrails)</div>
+          <div class="arch-node active-y">🧠 Multi-Agent Orchestrator (LangGraph)</div>
+          <div class="arch-node active-y">📊 API Hub + Observability (Langfuse)</div>
+          <div class="arch-node active-y">🏪 Agent Marketplace</div>
+          <div class="arch-node active-y">🔌 MCP Gateway</div>
+          <div class="arch-node active-y">👤 Admin &amp; Role Management</div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
+        <div>
+          <div class="arch-arrow">↕ Secure Tunnel</div>
+          <!-- EDGE -->
+          <div class="arch-layer edge-layer">
+            <div class="arch-layer-label bot">🖥️ The Edge — Your Office / Data Center</div>
+            <div class="arch-layer-nodes">
+              <div class="arch-node active-g">Dell Pro Max (GB10)</div>
+              <div class="arch-node active-g">Private LLM Hosting</div>
+              <div class="arch-node active-g">Model Studio / Fine-Tuning</div>
+              <div class="arch-node active-g">Edge-Side PII Redaction</div>
+            </div>
+            <div style="margin-top:1rem;padding:.75rem;background:rgb(113 111 111 / 6%);border-radius:8px;font-size:.8rem;color:var(--green);text-align:center">✓ Data physically never leaves this box</div>
+          </div>
+        </div>
+        <div>
+          <div class="arch-arrow">↕ API (Governed)</div>
+          <!-- PUBLIC MODELS -->
+          <div class="arch-layer">
+            <div class="arch-layer-label top">🌐 Public Model Providers (BYOM — Your Choice)</div>
+            <div class="arch-layer-nodes">
+              <div class="arch-node">GPT-4o</div>
+              <div class="arch-node">Claude 3.5</div>
+              <div class="arch-node">Gemini Pro</div>
+              <div class="arch-node">Llama-3</div>
+              <div class="arch-node">Custom API</div>
+            </div>
+            <div style="margin-top:1rem;padding:.75rem;background:var(--ydim);border-radius:8px;font-size:.8rem;color:var(--yellow);text-align:center">⚡ PII stripped before any external call</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="byom-section" id="byom">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">BYOM — Bring Your Own Model</div>
+      <h2>Why BYOM changes<br>everything for enterprise AI.</h2>
+    </div>
+    <div class="byom-how">
+      <div class="reveal d1">
+        <h3 style="margin-bottom:1.5rem;color:var(--muted);font-weight:400;font-size:1rem">Cloud AI SaaS forces you into their model. Drayvn doesn't.</h3>
+        <div class="byom-step"><div class="byom-step-num">01</div><div><div class="byom-step-title">Connect Any Model Provider</div><div class="byom-step-desc">Add your OpenAI API key, Anthropic key, Google AI key, or any OpenAI-compatible endpoint. Drayvn routes calls through its governed layer — PII stripped, costs tracked, policies enforced.</div></div></div>
+        <div class="byom-step"><div class="byom-step-num">02</div><div><div class="byom-step-title">Host Your Own Private Model</div><div class="byom-step-desc">Load Llama-3, Mistral, Phi-3, or your fine-tuned model onto the Dell Pro Max in your office. It serves inference requests at zero marginal cost, 24/7, to any agent that needs it.</div></div></div>
+        <div class="byom-step"><div class="byom-step-num">03</div><div><div class="byom-step-title">Route by Policy, Not by Hand</div><div class="byom-step-desc">Define rules: HR queries → on-prem model. Customer-facing tasks → GPT-4o. Legal document analysis → Claude 3.5. Model routing is a policy, not a config file you maintain.</div></div></div>
+        <div class="byom-step"><div class="byom-step-num">04</div><div><div class="byom-step-title">Switch Without Re-Engineering</div><div class="byom-step-desc">Model-agnostic orchestration means you can swap any model without touching agent code. When GPT-5 drops, you flip a routing rule. Your agents keep running.</div></div></div>
+      </div>
+      <div class="reveal d2">
+        <div style="border: 1px solid rgb(113 113 113 / 20%); border-radius: 14px; padding: 2rem; background: rgb(143 143 143 / 3%);">
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:1.5rem">BYOM Model Routing Policy</div>
+          <div style="display:flex;flex-direction:column;gap:.85rem">
+            <div style="padding:1rem;background:var(--card);border:1px solid var(--border);border-radius:10px">
+              <div style="font-size:.78rem;font-weight:700;color:var(--muted);margin-bottom:.5rem;letter-spacing:.06em;text-transform:uppercase">If data is PHI or PII</div>
+              <div style="font-size:.85rem;font-weight:600;color:var(--green)">→ Dell Pro Max (Llama-3) — never leaves building</div>
+            </div>
+            <div style="padding:1rem;background:var(--card);border:1px solid var(--border);border-radius:10px">
+              <div style="font-size:.78rem;font-weight:700;color:var(--muted);margin-bottom:.5rem;letter-spacing:.06em;text-transform:uppercase">If task is domain-specific</div>
+              <div style="font-size:.85rem;font-weight:600;color:var(--green)">→ Your custom fine-tuned model (Model Studio)</div>
+            </div>
+            <div style="padding:1rem;background:var(--card);border:1px solid var(--border);border-radius:10px">
+              <div style="font-size:.78rem;font-weight:700;color:var(--muted);margin-bottom:.5rem;letter-spacing:.06em;text-transform:uppercase">If task is general reasoning</div>
+              <div style="font-size:.85rem;font-weight:600;color:var(--yellow)">→ GPT-4o / Claude 3.5 (PII stripped first)</div>
+            </div>
+            <div style="padding:1rem;background:var(--card);border:1px solid var(--border);border-radius:10px">
+              <div style="font-size:.78rem;font-weight:700;color:var(--muted);margin-bottom:.5rem;letter-spacing:.06em;text-transform:uppercase">If cost budget exceeded</div>
+              <div style="font-size:.85rem;font-weight:600;color:var(--muted)">→ Route to cheaper model or block + alert</div>
+            </div>
+          </div>
+          <div style="margin-top:1.5rem;padding:.85rem;background:rgb(116 117 116 / 6%);border-radius:8px;font-size:.8rem;color:var(--green);text-align:center">All routing is audited, logged, and reversible</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="data-flow" id="dataflow">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Data Flow — Sensitive Query</div>
+      <h2>What happens when an employee<br>asks a sensitive question.</h2>
+      <p class="section-intro" style="max-width:560px">Follow a query containing PII through the Drayvn stack. Every step is governed, logged, and auditable.</p>
+    </div>
+    <div class="flow-timeline reveal d1">
+      <div class="ft-step">
+        <div class="ft-num g">1</div>
+        <div class="ft-content"><div class="ft-title">Employee submits query via Enterprise Copilot</div><div class="ft-desc">"Show me John Smith's (SSN: 234-56-7890) claim history from the past 6 months."</div><div class="ft-badge">Origin: HR Department · User: Sarah Chen</div></div>
+      </div>
+      <div class="ft-step">
+        <div class="ft-num g">2</div>
+        <div class="ft-content"><div class="ft-title">Edge-Side Sentinel intercepts before network</div><div class="ft-desc">On the Dell Pro Max in your building, The Sentinel detects PII: SSN pattern found. Redacts it to "SSN: [REDACTED-XXX-XX-7890]" and tags the query for on-prem routing.</div><div class="ft-badge">Data never left your building yet</div></div>
+      </div>
+      <div class="ft-step">
+        <div class="ft-num y">3</div>
+        <div class="ft-content"><div class="ft-title">BYOM Routing Policy evaluates</div><div class="ft-desc">Policy engine detects "PHI/PII" tag → routes to on-premise Llama-3 model on Dell Pro Max. Public cloud APIs are not called for this query.</div><div class="ft-badge">Policy: PHI → On-Prem model</div></div>
+      </div>
+      <div class="ft-step">
+        <div class="ft-num g">4</div>
+        <div class="ft-content"><div class="ft-title">RAG retrieval from private knowledge base</div><div class="ft-desc">The orchestrator queries the Vector Store (also on-prem) for relevant claims data. Retrieved documents stay within the local network boundary.</div><div class="ft-badge">Retrieval: On-prem vector DB</div></div>
+      </div>
+      <div class="ft-step">
+        <div class="ft-num g">5</div>
+        <div class="ft-content"><div class="ft-title">Local LLM generates response</div><div class="ft-desc">Llama-3 on Dell Pro Max synthesizes the answer from retrieved claims data. Full response generated on your hardware. Zero external API calls made.</div><div class="ft-badge">Inference: $0.00 — local hardware</div></div>
+      </div>
+      <div class="ft-step">
+        <div class="ft-num g">6</div>
+        <div class="ft-content"><div class="ft-title">Sentinel output check + Observability log</div><div class="ft-desc">Response passes output scan. Full trace logged to Langfuse: query, model used, tokens, latency, department attribution ($0.00 edge cost), policy decisions.</div><div class="ft-badge">Logged · Attributed · Auditable · Complete</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hybrid-compare">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Deployment Options</div>
+      <h2>Three ways to deploy Drayvn.</h2>
+    </div>
+    <div class="compare-grid">
+      <div class="compare-card reveal d1">
+        <div class="compare-card-label" style="color:var(--muted)">Option A</div>
+        <h3>Cloud-Only Mode</h3>
+        <p style="font-size:.85rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.6">All Drayvn modules in cloud, BYOM model providers via API. Best for teams getting started.</p>
+        <div class="compare-point"><div class="compare-point-ico">✓</div><div class="compare-point-text"><strong>Fast setup</strong> — live in hours</div></div>
+        <div class="compare-point"><div class="compare-point-ico">✓</div><div class="compare-point-text"><strong>BYOM</strong> — your model keys, your provider choice</div></div>
+        <div class="compare-point"><div class="compare-point-ico">✓</div><div class="compare-point-text"><strong>Full governance</strong> — Sentinel, Observability, MCP Gateway</div></div>
+        <div class="compare-point"><div class="compare-point-ico">↗</div><div class="compare-point-text" style="color:#6B7280">Data leaves building to model providers (PII stripped first)</div></div>
+      </div>
+      <div class="compare-card winner reveal d2">
+        <div class="compare-card-label" style="color:var(--green)">Option B — Most Popular</div>
+        <h3 style="color:var(--green)">Hybrid Mode ✦</h3>
+        <p style="font-size:.85rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.6">Control plane in Drayvn cloud, sensitive inference on your Dell Pro Max. The best of both worlds.</p>
+        <div class="compare-point"><div class="compare-point-ico">✓</div><div class="compare-point-text"><strong>Sensitive data never leaves</strong> your building</div></div>
+        <div class="compare-point"><div class="compare-point-ico">✓</div><div class="compare-point-text"><strong>Zero inference cost</strong> on edge for private workloads</div></div>
+        <div class="compare-point"><div class="compare-point-ico">✓</div><div class="compare-point-text"><strong>BYOM everywhere</strong> — on-prem + cloud models simultaneously</div></div>
+        <div class="compare-point"><div class="compare-point-ico">✓</div><div class="compare-point-text"><strong>Physical isolation</strong> — not logical, not VPC, physical</div></div>
+      </div>
+      <div class="compare-card reveal d3">
+        <div class="compare-card-label" style="color:var(--muted)">Option C</div>
+        <h3>Full Air-Gap Mode</h3>
+        <p style="font-size:.85rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.6">Entire Drayvn stack on-premise. No external API calls. For defense, intelligence, and ultra-regulated industries.</p>
+        <div class="compare-point"><div class="compare-point-ico">✓</div><div class="compare-point-text"><strong>100% on-prem</strong> — control plane + intelligence</div></div>
+        <div class="compare-point"><div class="compare-point-ico">✓</div><div class="compare-point-text"><strong>Zero cloud dependency</strong> — fully disconnectable</div></div>
+        <div class="compare-point"><div class="compare-point-ico">✓</div><div class="compare-point-text"><strong>Defense/HIPAA-grade</strong> — maximum isolation</div></div>
+        <div class="compare-point"><div class="compare-point-ico">→</div><div class="compare-point-text" style="color:#6B7280">Custom pricing — contact enterprise team</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+		
+		
+		
+		
+		
+		
+		
 
 		 <!-- /.service-one -->
 		

@@ -75,17 +75,263 @@
             <div class="container">
                 <div class="block-title text-center">
                     <!--<p>Feature List</p-->
-                    <h3>FAQ</h3>
+                    <h3>Everything you need<br>to know about Drayvn.</h3>
 						
                 </div><!-- /.block-title text-center -->
 				<div class="cta-two__text text-center">
-                                <p>Will be updated soon...</p>
+                                <p>From BYOM architecture to compliance, pricing, and how we're fundamentally different from cloud AI SaaS providers.
+
+</p>
                             </div><!-- /.cta-two__text -->
 				</div>
   </section><!-- /.service-one -->
+	  
 
+		 <div class="faq-page">
+  <div class="container">
+    <!-- BYOM EXPLAINER CALLOUT -->
+    <div class="byom-explainer reveal">
+      <div class="section-label">The Key Difference Worth Understanding First</div>
+      <h2 style="font-size:1.8rem;margin-bottom:.75rem">Drayvn is BYOM — Bring Your Own Model.<br>Cloud AI SaaS is TYMF — Take Your Model or F***.  </h2>
+      <p style="color:var(--muted);font-size:1rem;line-height:1.75">This is the fundamental difference between Drayvn and every ChatGPT Enterprise, Copilot 365, or Gemini for Workspace offer on the market. Understanding this changes how you evaluate every other feature.</p>
+      <div class="be-grid">
+        <div>
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fc8181;margin-bottom:1rem">Cloud AI SaaS (ChatGPT / Copilot / Gemini)</div>
+          <div class="be-vs">
+            <div class="be-vs-item bad">❌ You must use <strong>their model</strong> — OpenAI, Microsoft, or Google</div>
+            <div class="be-vs-item bad">❌ <strong>Your data goes to their servers</strong> to train or serve their model</div>
+            <div class="be-vs-item bad">❌ When they change the model, <strong>your outputs change</strong> without warning</div>
+            <div class="be-vs-item bad">❌ You pay <strong>per-user seat</strong> even when no one is using it</div>
+            <div class="be-vs-item bad">❌ You're <strong>completely locked in</strong> — all your agents run on their infrastructure</div>
+            <div class="be-vs-item bad">❌ <strong>No physical isolation</strong> — "enterprise" just means a legal agreement, not a technical guarantee</div>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:1rem">Drayvn — BYOM Platform</div>
+          <div class="be-vs">
+            <div class="be-vs-item good">✓ Bring <strong>any model</strong> — GPT-4, Claude, Gemini, Llama, or your own fine-tuned model</div>
+            <div class="be-vs-item good">✓ <strong>PII stripped before any model sees it</strong> — on your own edge hardware</div>
+            <div class="be-vs-item good">✓ You control when and <strong>if models are upgraded</strong> — no surprise changes</div>
+            <div class="be-vs-item good">✓ Pay for the <strong>platform + your own API keys</strong> — you negotiate your own model pricing</div>
+            <div class="be-vs-item good">✓ <strong>Eject to Code</strong> — export portable Python agents that run anywhere</div>
+            <div class="be-vs-item good">✓ <strong>Physical isolation</strong> — Dell Pro Max in your building for sensitive data</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-		 <!-- /.service-one -->
+    <!-- FAQ SECTIONS -->
+    <div class="faq-section reveal">
+      <div class="faq-section-title">BYOM &amp; Model Architecture</div>
+      <div class="faq-wrap">
+        <div class="faq-item">
+          <button class="faq-q" onclick="tFaq(this)">What does "Bring Your Own Model" actually mean in practice? <span class="faq-arr">›</span></button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <p>BYOM means you bring your own API keys for commercial model providers (OpenAI, Anthropic, Google, Mistral, etc.) and connect them to the Drayvn platform. Drayvn never proxies through its own model contracts — you maintain your direct relationship with every model provider, including pricing, terms, and data processing agreements.</p>
+            <p>In practice: You add your OpenAI API key to Drayvn's settings. All calls to GPT-4 go directly from Drayvn's orchestration layer to OpenAI using your key. Drayvn charges you a transparent platform markup (10% on Starter, 5% on Growth, 0% on Enterprise) for the governance, orchestration, and routing layer — not for the compute itself.</p>
+            <p>You can also host open-source models (Llama-3, Mistral, Phi-3) entirely on your Dell Pro Max hardware, in which case there's literally $0 per-token cost on that model forever.</p>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="tFaq(this)">How is this different from AWS Bedrock or Azure OpenAI, which also let me choose models? <span class="faq-arr">›</span></button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <p>Great question — this is the most important nuance. AWS Bedrock and Azure OpenAI offer <strong>"model choice" within their cloud</strong>. Your data still goes to their datacenter, is processed on their compute, and exists within their infrastructure. That's "logical isolation" — a legal agreement that they won't use your data to train, but your data physically traverses and is processed by their systems.</p>
+            <p>Drayvn's BYOM is different in two key ways:</p>
+            <ul>
+              <li><strong>Physical isolation:</strong> With a Dell Pro Max on your premises, inference happens on hardware you own, in a building you control. No cloud provider ever sees that data.</li>
+              <li><strong>Portable architecture:</strong> Your agents in Drayvn aren't locked to AWS or Azure infrastructure. You can eject any agent to portable Python and run it on any cloud, on-prem, or locally. Bedrock agents are Bedrock agents. Azure AI agents are Azure agents.</li>
+            </ul>
+            <p>AWS/Azure model choice is like choosing which restaurant in their building you eat at. Drayvn BYOM is choosing to cook in your own kitchen — and having a chef (Drayvn) help you do it well.</p>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="tFaq(this)">Can I use different models for different agents in the same workflow? <span class="faq-arr">›</span></button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <p>Yes — this is one of the most powerful BYOM features. In a single multi-agent workflow, you can assign different models to different agents based on their task requirements:</p>
+            <ul>
+              <li>A <strong>Supervisor Agent</strong> might use GPT-4o for complex reasoning</li>
+              <li>A <strong>Data Extraction Agent</strong> might use Llama-3 on-prem (because the data is sensitive)</li>
+              <li>A <strong>Summarization Agent</strong> might use Mistral (because it's cheaper for simple tasks)</li>
+              <li>A <strong>Domain Expert Agent</strong> uses your fine-tuned model from Model Studio</li>
+            </ul>
+            <p>The routing is defined in the Visual Builder as a policy — no code changes required when you want to swap a model. The orchestration layer handles all the API format differences transparently.</p>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="tFaq(this)">What happens to my agents if I want to stop using Drayvn? <span class="faq-arr">›</span></button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <p>This is what "Eject to Code" is designed for. Any agent built in Drayvn's Visual Builder can be exported as portable Python code at any time. The exported code uses standard LangGraph and LangChain libraries — not Drayvn-proprietary formats.</p>
+            <p>The exported agents can be run on:</p>
+            <ul>
+              <li>AWS EC2 or Lambda</li>
+              <li>Azure App Service or Functions</li>
+              <li>Any Kubernetes cluster</li>
+              <li>A bare Linux server</li>
+              <li>Your Dell Pro Max directly</li>
+            </ul>
+            <p>You retain 100% of the agent logic you've built. This is a fundamental part of our philosophy — we earn your business month-to-month because the platform is valuable, not because you're trapped.</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-section reveal">
+      <div class="faq-section-title y">vs. Cloud AI SaaS — ChatGPT Enterprise / Microsoft Copilot / Gemini</div>
+      <div class="faq-wrap">
+        <div class="faq-item">
+          <button class="faq-q" onclick="tFaq(this)">My team already uses ChatGPT Enterprise — why would I switch to Drayvn? <span class="faq-arr">›</span></button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <p>ChatGPT Enterprise is a great general-purpose chat interface. Drayvn is an AI operating system for enterprise workflows. They're actually complementary — many Drayvn customers use ChatGPT Enterprise as one of their BYOM model providers, routed through Drayvn's governance layer.</p>
+            <p>The specific things Drayvn does that ChatGPT Enterprise can't:</p>
+            <ul>
+              <li><strong>Automated workflows:</strong> ChatGPT requires a human to start every conversation. Drayvn agents run on schedules, triggers, and events — no human needed.</li>
+              <li><strong>Physical data isolation:</strong> ChatGPT Enterprise data goes to OpenAI's servers (with a legal agreement). Drayvn Hybrid puts sensitive data on hardware in your office.</li>
+              <li><strong>Browser-Use automation:</strong> ChatGPT can't log into your shipping portal and update tracking numbers. Drayvn agents can.</li>
+              <li><strong>Model choice:</strong> ChatGPT Enterprise is GPT-4o only. Drayvn lets you use any model, including your own.</li>
+              <li><strong>Cost chargeback:</strong> ChatGPT Enterprise gives you a bill. Drayvn gives you a bill broken down by department, team, and task type.</li>
+            </ul>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="tFaq(this)">We're a Microsoft shop — M365 Copilot is already included. Why would we add Drayvn? <span class="faq-arr">›</span></button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <p>M365 Copilot is excellent for M365 tasks — drafting emails in Outlook, summarizing Teams meetings, generating slides in PowerPoint. It's deeply integrated into the Microsoft productivity stack, and if that's your primary use case, it's hard to beat.</p>
+            <p>Drayvn becomes relevant the moment you need to:</p>
+            <ul>
+              <li><strong>Go beyond M365:</strong> Your ERP is SAP, not Dynamics. Your CRM is Salesforce, not Teams. Drayvn connects and automates these via MCP Gateway and Browser-Use.</li>
+              <li><strong>Build custom agents:</strong> Copilot Studio is linear and limited to Microsoft's agent patterns. Drayvn's Visual Builder supports cyclic graphs, Supervisor/Worker hierarchies, and long-running stateful tasks.</li>
+              <li><strong>Use non-Microsoft models:</strong> Copilot is GPT-4 only. Some regulated industries have constraints on which model provider is allowed. Drayvn gives you the choice.</li>
+              <li><strong>Physical data isolation:</strong> Even with Microsoft's compliance tier, your data lives in Microsoft's datacenter. Drayvn Hybrid puts it in yours.</li>
+            </ul>
+            <p>Most enterprises run Drayvn alongside M365 Copilot — Copilot for the Microsoft productivity layer, Drayvn for cross-system automation and governed AI workflows.</p>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="tFaq(this)">How is Drayvn different from Gemini for Google Workspace? <span class="faq-arr">›</span></button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <p>Gemini for Workspace integrates AI into Google Docs, Gmail, Sheets, and Meet. Like M365 Copilot, it's excellent within its ecosystem. The limitations are similar:</p>
+            <ul>
+              <li>Locked to Google's Gemini model — no model choice</li>
+              <li>Your data is processed by Google infrastructure</li>
+              <li>Agents are confined to Google's product integrations</li>
+              <li>No ability to build and deploy custom AI agents outside Google products</li>
+              <li>No physical data isolation option</li>
+            </ul>
+            <p>Interestingly, Drayvn's architecture is actually <span class="highlight">powered by Google Design Patterns</span> (Google ADK, LangGraph, GCP infrastructure). We use Google's technology under the hood — but we abstract it so you're not locked to any single provider, including Google.</p>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="tFaq(this)">What about Salesforce Einstein AI or ServiceNow AI? <span class="faq-arr">›</span></button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <p>Salesforce Einstein, ServiceNow AI, SAP Joule — these are all AI assistants embedded within a specific SaaS product. They're very good within their product. Einstein knows your Salesforce data. Joule knows your SAP data.</p>
+            <p>The limitation: they're <strong>siloed intelligence</strong>. Einstein can answer questions about your pipeline but can't cross-reference your HR system or update your ERP. None of them can coordinate with each other or operate across the stack.</p>
+            <p>Drayvn's multi-agent orchestrator is the cross-system intelligence layer that sits above all these tools. You can build a Drayvn agent that: reads from Salesforce via Einstein API, updates SAP via MCP Gateway, sends an email via Gmail, and logs everything to your internal database — in a single automated workflow. None of the individual SaaS AI assistants can do this.</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-section reveal">
+      <div class="faq-section-title">Security, Privacy &amp; Compliance</div>
+      <div class="faq-wrap">
+        <div class="faq-item">
+          <button class="faq-q" onclick="tFaq(this)">What exactly does "physical isolation" mean and why does it matter? <span class="faq-arr">›</span></button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <p>Physical isolation means the hardware running your AI inference is a machine you own, in a building you control. "Logical isolation" — what cloud providers offer — means a software configuration on their hardware says your data is separate from other customers. Both have strong legal agreements. Only physical isolation offers a technical guarantee.</p>
+            <p>Why does it matter? Three scenarios:</p>
+            <ul>
+              <li><strong>Healthcare (HIPAA):</strong> Patient data physically never leaving the hospital network eliminates an entire category of compliance risk that legal agreements alone can't address.</li>
+              <li><strong>Legal:</strong> Client-privileged information processed on your law firm's own machine has no chain-of-custody question for opposing counsel to exploit.</li>
+              <li><strong>Nation-state threat models:</strong> For defense contractors or critical infrastructure, "our AI server is in our classified facility" is a statement you can make with a Dell Pro Max that you simply cannot make with any cloud service.</li>
+            </ul>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="tFaq(this)">Does Drayvn store my prompts? Can Drayvn's team see my data? <span class="faq-arr">›</span></button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <p>All prompts and inference results are logged in <strong>your own Langfuse observability instance</strong> — either self-hosted on your infrastructure or in a dedicated cloud tenant accessible only by your team.</p>
+            <p>Drayvn's control plane (the orchestration layer in GCP) routes requests and manages agent state but does not store prompt content. For Enterprise Hybrid customers, even the routing metadata is minimized — the edge hardware handles inference locally and only sends coordination signals to the control plane.</p>
+            <p>Drayvn staff access to customer environments requires customer-initiated support tickets and is logged with full audit trail. There is no standing access to customer data or prompts.</p>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="tFaq(this)">How does The Sentinel detect and handle PII? <span class="faq-arr">›</span></button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <p>The Sentinel runs on your local Dell Pro Max (or as a cloud-side module on Starter/Growth) and scans every prompt and response using a combination of:</p>
+            <ul>
+              <li><strong>Pattern matching:</strong> SSNs, credit card numbers, phone numbers, email addresses, IP addresses, passport formats, and 50+ common PII patterns recognized out of the box</li>
+              <li><strong>Named entity recognition (NER):</strong> ML-based detection of names, organizations, locations, and medical terms in context</li>
+              <li><strong>Custom patterns:</strong> Enterprise customers can define their own regex or ML patterns for proprietary identifiers (employee IDs, client codes, internal project names)</li>
+            </ul>
+            <p>Detected PII is replaced with a labeled token: "John Smith (SSN: 234-56-7890)" becomes "[PERSON: JS-4421] (SSN: [REDACTED-XXX-XX-7890])". The original → token mapping is stored in an encrypted vault on your infrastructure, never in Drayvn's systems.</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="faq-section reveal">
+      <div class="faq-section-title m">Platform, Model Studio &amp; Pricing</div>
+      <div class="faq-wrap">
+        <div class="faq-item">
+          <button class="faq-q" onclick="tFaq(this)">How does Model Studio and the Custom Model Builder work? <span class="faq-arr">›</span></button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <p>Model Studio is available now on Enterprise Hybrid plans. It works in two output modes:</p>
+            <p><strong>Custom RAG Knowledge Base:</strong> Upload documents (PDFs, Word, spreadsheets, web links) and connect data sources (databases, SharePoint, Google Drive, APIs). Drayvn chunks, embeds, and indexes everything into a private vector store on your Dell Pro Max. Your Enterprise Copilot and agents query this index to answer questions grounded in your specific enterprise data.</p>
+            <p><strong>Fine-Tuned Custom Model:</strong> Using the same uploaded data, Drayvn generates synthetic Q&amp;A training pairs using an LLM, then fine-tunes a base model (Llama-3, Mistral, Phi-3) overnight on your Dell Pro Max hardware. The resulting model has internalized your domain knowledge — it's not retrieval, it's built-in expertise. Training runs entirely on your hardware. No cloud vendor sees your training data.</p>
+            <p>The typical pipeline is: upload documents → review auto-generated Q&amp;A pairs (optional curation step) → kick off fine-tuning → model available in your BYOM routing within 12–24 hours.</p>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="tFaq(this)">What is the Dell Pro Max (GB10) and do I have to buy one? <span class="faq-arr">›</span></button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <p>The Dell Pro Max (GB10) is an NVIDIA GB10-powered AI server designed for on-premises LLM inference and fine-tuning. It's compact enough to sit in a server room or even a secure office space, and powerful enough to run LLMs like Llama-3-70B at production speeds 24/7.</p>
+            <p>You don't have to buy one to use Drayvn. The Starter and Growth plans work entirely in cloud mode with BYOM API providers. The Dell Pro Max is required for:</p>
+            <ul>
+              <li>Physical data isolation (Hybrid and Air-Gap modes)</li>
+              <li>Zero-cost on-prem inference</li>
+              <li>Model Studio fine-tuning on your own hardware</li>
+            </ul>
+            <p>Options: Purchase outright (~$4,000 one-time cost) or lease through Drayvn's <span class="highlight">Hardware-as-a-Service</span> program at $500/month. Drayvn handles delivery, configuration, and integration into your hybrid architecture.</p>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="tFaq(this)">How is Drayvn priced vs. cloud AI SaaS? Am I actually saving money? <span class="faq-arr">›</span></button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <p>The economics differ fundamentally by usage scale. Here's a realistic comparison for a 100-person organization running moderate AI workloads:</p>
+            <ul>
+              <li><strong>ChatGPT Enterprise:</strong> ~$30/user/month × 100 = $3,000/month. Includes GPT-4 but no governance, no multi-agent workflows, no physical isolation.</li>
+              <li><strong>M365 Copilot:</strong> $30/user/month × 100 = $3,000/month. Limited to Microsoft ecosystem.</li>
+              <li><strong>Drayvn Growth ($1,999/month):</strong> Platform fee covers unlimited users. You pay your own API keys directly — typically $200-600/month at 100 users with mixed workloads. Total: ~$2,200-2,600/month with full governance, multi-agent automation, and BYOM flexibility.</li>
+            </ul>
+            <p>The cost advantage accelerates with volume. At high-volume usage (millions of tokens/day), the per-token savings on cloud SaaS per-user pricing become dramatic. And if you add a Dell Pro Max for on-prem inference, high-frequency tasks run at literally $0/token on local hardware — the CAPEX pays back in months.</p>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="tFaq(this)">When are Browser-Use Agents available? <span class="faq-arr">›</span></button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <p>Browser-Use Agents are a <span class="highlight-y">Phase 2</span> feature expected next quarter. They allow Drayvn agents to launch a secure headless browser, navigate to web portals, authenticate, and interact with them as a human would — clicking buttons, filling forms, reading tables, downloading reports.</p>
+            <p>This capability enables automation of systems with no API: legacy shipping portals, older ERP interfaces, third-party vendor portals, government systems, and any web-based workflow your staff currently does manually.</p>
+            <p>Growth plan customers will get early access. Enterprise Hybrid customers get priority access as part of the roadmap program. If Browser-Use is your primary use case, <a href="pricing.html#demo" style="color:var(--green)">request a demo</a> and we'll give you a timeline based on your specific portal.</p>
+          </div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="tFaq(this)">How long does it take to get Drayvn deployed and see value? <span class="faq-arr">›</span></button>
+          <div class="faq-a"><div class="faq-a-inner">
+            <p>Typical timeline from "yes" to measurable value:</p>
+            <ul>
+              <li><strong>Day 1–3:</strong> Platform provisioned. Your BYOM model API keys connected. Enterprise Copilot trained on your first document set. Sentinel policies activated.</li>
+              <li><strong>Day 4–7:</strong> First agent built in Visual Builder. IT and HR departments using Enterprise Copilot. Observability dashboard showing cost attribution by department.</li>
+              <li><strong>Day 8–14:</strong> 2-3 agents deployed to Agent Marketplace. Governance policies refined. Team onboarding completed.</li>
+              <li><strong>Day 15–30:</strong> First measurable ROI report. Typically: X hours of manual work automated, $Y in previously untracked AI spend now visible and capped, Z PII incidents prevented.</li>
+            </ul>
+            <p>For Enterprise Hybrid (with Dell Pro Max): add 5–7 days for hardware delivery and configuration on top of the above timeline. We provide a dedicated deployment engineer for all Enterprise Hybrid customers.</p>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 		
 		
         <section class="cta-three">
@@ -229,6 +475,13 @@
             </div><!-- /.side-menu__content -->
         </div><!-- /.side-menu__block-inner -->
     </div><!-- /.side-menu__block -->
+	<script>
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}}),{threshold:.06,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+function tFaq(btn){const i=btn.closest('.faq-item');const o=i.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(x=>x.classList.remove('open'));if(!o)i.classList.add('open')}
+// active nav
+document.querySelectorAll('.nav-links a').forEach(a=>{if(window.location.href.includes(a.getAttribute('href')))a.classList.add('active')});
+</script>
 
     <script src="assets/js/jquery-3.5.0.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
